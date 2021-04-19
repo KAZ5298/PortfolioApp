@@ -15,4 +15,72 @@
       <%= @user.bio %>
     </div>
   </div>
+  <ul class="nav nav-tabs nav-justified">
+    <li class="active">
+      <%= link_to user_path(@user) do %>
+        <div class="text">
+          つぶやき
+        </div>
+        <div class="num">
+          #{@user.tweets.count}
+        </div>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to nil do %>
+        <div class="text">
+          フォロー
+        </div>
+        <div class="num">
+          0
+        </div>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to nil do %>
+        <div class="text">
+          フォロワー
+        </div>
+        <div class="num">
+          0
+        </div>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to nil do %>
+        <div class="text">
+          お気に入り
+        </div>
+        <div class="num">
+          0
+        </div>
+      <% end %>
+    </li>
+  </ul>
+  <div class="list-group">
+    <% if @user.tweets.empty? %>
+      <div class="list-group-item">
+        まだツイートはありません
+      </div>
+    <% end %>
+    <%= div_for @user.tweets, class: "list-group-item" do |t| %>
+      <h4 class="user">
+        <span class="user-name">
+          <%= link_to t.user.name, user_path(t.user) %>
+        </span>
+        <span class="user-id">
+          @#{t.user.name}
+        </span>
+        <span class="time pull-right">
+          <%= distance_of_time_in_words_to_now(t.created_at) %>
+        </span>
+        <div class="clear"></div>
+      </h4>
+      <div class="tweet-content">
+        <p>
+          <%= t.content %>
+        </p>
+      </div>
+    <% end %>
+  </div>
 </div>
