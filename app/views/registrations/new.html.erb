@@ -29,9 +29,8 @@
         <%= f.password_field :password_confirmation, class:'form-control' %>
       </div>
       <%= f.submit "登録", class: "btn btn-primary" %>
-      <div class="clear">
-        
-      </div>
+      <%= link_to "ログイン", login_path, class: "login pull-right" %>
+      <div class="clear"></div>
     <% end %>
   </div>
 </div>
