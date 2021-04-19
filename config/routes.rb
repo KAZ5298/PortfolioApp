@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get '/login', to: 'sessions#new'
-  get '/sign_up', to: 'registrations#new'
-  root 'registrations#new'
-  resource :registrations
+  resources :users, only: [:index, :show]
+  resource :registrations, only: [:new, :create]
+  resource :sessions, only: [:new, :create, :destroy]
+  root to: 'registrations#new'
 end

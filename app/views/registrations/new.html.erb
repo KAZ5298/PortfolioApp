@@ -12,6 +12,11 @@
   <div class="col-xs-6 right-content">
     <%= form_for @user, url: registrations_path, method: :post do |f| %>
       <h2>会員登録</h2>
+      <% @user.errors.each do |attr, message| %>
+        <div class="alert alert-danger">
+          <%= message %>
+        </div>
+      <% end %>
       <div class="form-group">
         <%= f.label :name, "ユーザーID", class:"control-label" %>
         <%= f.text_field :name, class:'form-control' %>
@@ -29,7 +34,7 @@
         <%= f.password_field :password_confirmation, class:'form-control' %>
       </div>
       <%= f.submit "登録", class: "btn btn-primary" %>
-      <%= link_to "ログイン", login_path, class: "login pull-right" %>
+      <%= link_to "ログイン", new_sessions_path, class: "login pull-right" %>
       <div class="clear"></div>
     <% end %>
   </div>

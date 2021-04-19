@@ -7,8 +7,7 @@ class SessionsController < ApplicationController
     email = params_user[:email]
     password = params_user[:password]
     if login(email, password)
-      redirect_to root_url
-      flash[:success] = "ログインしました"
+      redirect_to root_url, notice: "ログインしました"
     else
       @user = User.new(email: email)
       render :new
