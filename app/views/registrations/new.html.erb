@@ -7,6 +7,13 @@
     <p class="by">
       開発者：出村和彦
     </p>
+    <% if notice %>
+      <p>
+        <div class="alert alert-info">
+          <%= notice %>
+        </div>
+      </p>
+    <% end %>
   </div>
   
   <div class="col-xs-6 right-content">

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :require_login
 
   # GET /users or /users.json
   def index

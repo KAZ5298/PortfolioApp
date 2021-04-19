@@ -14,6 +14,11 @@ class SessionsController < ApplicationController
     end
   end
   
+  def destroy
+    logout
+    redirect_to root_url, notice: "ログアウトしました"
+  end
+  
   private
   
   def params_user
