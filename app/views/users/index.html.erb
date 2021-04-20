@@ -1,8 +1,12 @@
-<div class="col-xs-8" id="users-content">
-  <div class="list-group">
-    <div class="list-group-item user-list">
-      <h2>ユーザー一覧</h2>
-      <%= render partial: "users/user", collection: @users %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8" id="users-content">
+      <div class="list-group">
+        <div class="list-group-item user-list">
+          <h2>ユーザー一覧</h2>
+          <%= render partial: "users/user", collection: @users %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
