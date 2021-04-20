@@ -1,7 +1,7 @@
 <div class="container">
   <div id="registrations-new">
     <div class="row">
-      <div class="col-xs-6 left-content">
+      <div class="col left-content">
         <h1>#PortfolioApp</h1>
         <p class="ex">
           このサイトはフリーランス転職に使用するポートフォリオです。
@@ -18,7 +18,7 @@
         <% end %>
       </div>
       
-      <div class="col-xs-6 right-content">
+      <div class="col right-content">
         <%= form_for @user, url: registrations_path, method: :post do |f| %>
           <h2>会員登録</h2>
           <% @user.errors.each do |attr, message| %>

@@ -1,13 +1,12 @@
 <div class="container">
   <div id="sessions-new">
     <div class="row">
-      <div class="col-xs-5 login-content">
+      <div class="col login-content">
         <% if action_name == "create" %>
           <div class="alert alert-danger">
             メールアドレスまたはパスワードが正しくありません。
           </div>
         <% end %>
-        
         <%= form_for @user, url: sessions_path, method: :post do |f| %>
           <h2>ログイン</h2>
           <div class="form-body">
