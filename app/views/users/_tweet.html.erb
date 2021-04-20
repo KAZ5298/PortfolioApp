@@ -4,7 +4,7 @@
       <%= link_to t.user.name, user_path(t.user) %>
     </span>
     <span class="user-id">
-      @#{t.user.name}
+      <%= t.user.name %>
     </span>
     <span class="time pull-right">
       <%= distance_of_time_in_words_to_now(t.created_at) %>

@@ -8,7 +8,7 @@
     <%= render_user_screen_name(@user) %>
   </span>
   <span class="user-id">
-    @#{@user.name}
+    <%= @user.name %>
   </span>
   <div class="bio">
     <%= @user.bio %>
@@ -21,7 +21,7 @@
         つぶやき
       </div>
       <div class="num">
-        #{@user.tweets.count}
+        <%= @user.tweets.count %>
       </div>
     <% end %>
   </li>
@@ -31,7 +31,7 @@
         フォロー
       </div>
       <div class="num">
-        #{@user.inverse_followers.count}
+        <%= @user.inverse_followers.count %>
       </div>
     <% end %>
   </li>
@@ -41,7 +41,7 @@
         フォロワー
       </div>
       <div class="num">
-        #{@user.followers.count}
+        <%= @user.followers.count %>
       </div>
     <% end %>
   </li>
@@ -51,7 +51,7 @@
         お気に入り
       </div>
       <div class="num">
-        #{@user.favorites.count}
+        <%= @user.favorites.count %>
       </div>
     <% end %>
   </li>
