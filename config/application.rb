@@ -13,7 +13,6 @@ module Portfolioapp
     # -- all .rb files in that directory are automatically loaded.
     
     config.i18n.default_locale = :ja
-
-    config.sass.preferred_syntax = :sass
+    
   end
 end
