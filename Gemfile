@@ -52,6 +52,7 @@ group :development do
   gem 'sorcery'
   gem 'haml-rails'
   gem 'bootstrap'
+  gem 'bootstrap-sass'
   gem 'record_tag_helper', '~> 1.0'
 end
 
@@ -61,4 +62,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   gem 'pg', '0.20.0'
   gem 'sorcery'
+  gem 'bootstrap'
+  gem 'bootstrap-sass'
 end
