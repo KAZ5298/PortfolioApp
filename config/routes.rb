@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
   
   resources :tweets do
-    resources :favorites, only: [:create, :destroy]
+    resource :favorites, only: [:create, :destroy]
     get :timeline, on: :collection
   end
   
