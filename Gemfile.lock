@@ -119,7 +119,7 @@ GEM
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (>= 1.2, < 3)
-    pg (0.20.0)
+    pg (1.2.3)
     popper_js (1.16.0)
     puma (3.12.6)
     racc (1.5.2)
@@ -225,7 +225,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
-  pg (= 0.20.0)
+  pg
   puma (~> 3.0)
   rails (~> 5.0.7, >= 5.0.7.2)
   record_tag_helper (~> 1.0)
